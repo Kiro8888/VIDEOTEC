@@ -1,0 +1,48 @@
+﻿@model List<VIDEOTEC.Models.ViewModels.ListEmpresaViewModel>
+@{
+    ViewBag.Title = "Mis datos";
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="row" style="text-align:right;padding:5px">
+    <a href="~/Empresa/Nuevo" class="btn btn-primary">Nuevo</a>
+
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <table class="table">
+            <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Telefono</td>
+                <td>Direccion</td>
+                <td>Correo</td>
+                <td>Logo</td>
+                <td></td>
+            </tr>
+            @foreach (var oElemento in Model)
+            {
+                <tr>
+                    <td>@oElemento.Emp_id_empresa</td>
+                    <td>@oElemento.Emp_nombre</td>
+                    <td>@oElemento.Emp_telefono</td>
+                    <td>@oElemento.Emp_direccion</td>
+                    <td>@oElemento.Emp_correo</td>
+                    <td>@oElemento.Emp_logo</td>
+                    <td>
+                        <a class="btn btn-default" href="~/Empresa/Editar/@oElemento.Emp_id_empresa">Editar</a>
+                        <a class="btn btn-danger" href="~/Empresa/Eliminar/@oElemento.Emp_id_empresa">Eliminar</a>
+
+                    </td>
+                </tr>
+
+            }
+        </table>
+
+
+    </div>
+</div>

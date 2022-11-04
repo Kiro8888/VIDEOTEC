@@ -1,0 +1,60 @@
+﻿@model VIDEOTEC.Models.ViewModels.EmpresaViewModel
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+
+@using (Html.BeginForm("Nuevo","Empresa",FormMethod.Post))  { 
+<div class="row">
+    <div class="col-md-12">
+
+
+        <div>
+            @Html.LabelFor(d => d.Emp_nombre)
+            @Html.TextBoxFor(d => d.Emp_nombre, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Emp_nombre, null, new { @class = "red" })
+        </div>
+
+        <div>
+
+            @Html.LabelFor(d => d.Emp_telefono)
+            @Html.TextBoxFor(d => d.Emp_telefono, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Emp_nombre, null, new { @class = "red" })
+
+        </div>
+
+        <div>
+            @Html.LabelFor(d => d.Emp_direccion)
+            @Html.TextBoxFor(d => d.Emp_direccion, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Emp_nombre, null, new { @class = "red" })
+
+        </div>
+
+        <div>
+            @Html.LabelFor(d => d.Emp_correo)
+            @Html.TextBoxFor(d => d.Emp_correo, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Emp_nombre, null, new { @class = "red" })
+
+        </div>
+
+        <div>
+            @Html.LabelFor(d => d.Emp_logo)
+            @Html.TextBoxFor(d => d.Emp_logo, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(d => d.Emp_nombre, null, new { @class = "red" })
+
+        </div>
+
+    
+        <div style="text-align:right;">
+            <input value="Guardar" class="btn btn-primary" type="submit"/>
+        </div>
+
+    </div>
+
+
+
+</div>
+}
